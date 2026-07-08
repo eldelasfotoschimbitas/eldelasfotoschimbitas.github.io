@@ -7,8 +7,11 @@
 <meta name="description" content="Fotografía y video de eventos: XV años, sesiones, grados y eventos deportivos. Planes y paquetes 2026.">
 <meta property="og:title" content="El de las Fotos Chimbitas — Planes y Paquetes">
 <meta property="og:description" content="Fotografía y video de eventos. Mira los paquetes y reserva tu fecha.">
-<meta property="og:image" content="img/roja.jpg">
+<meta property="og:image" content="https://edsonpenagos123.github.io/paquetes-eldelasfotos/img/roja.jpg">
+<meta property="og:url" content="https://edsonpenagos123.github.io/paquetes-eldelasfotos/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://edsonpenagos123.github.io/paquetes-eldelasfotos/img/roja.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=Montserrat:wght@400;600;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
@@ -67,7 +70,9 @@ main{max-width:1080px;margin:0 auto;padding:0 1.2rem 4rem}
 .card-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(28,6,10,.92) 100%)}
 .badge{position:absolute;top:.9rem;right:.9rem;z-index:2;background:#120305;color:var(--oro);border:1px solid var(--oro2);
   font-weight:700;font-size:.78rem;padding:.35rem .6rem;border-radius:999px;letter-spacing:.05em}
-.card-name{position:absolute;left:1.1rem;bottom:.8rem;z-index:2;font-family:'Bodoni Moda',serif;font-size:1.45rem}
+.card-head{position:absolute;left:1.1rem;bottom:.8rem;z-index:2}
+.card-tag{font-family:'Raleway',sans-serif;font-weight:500;font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--oro);margin-bottom:.25rem}
+.card-name{font-family:'Bodoni Moda',serif;font-size:1.45rem}
 .card-body{padding:1.1rem 1.2rem 1.4rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
 .inc{list-style:none;display:flex;flex-direction:column;gap:.42rem;font-size:.82rem;color:#d9c9c2}
 .inc li::before{content:"•";color:var(--oro);margin-right:.55em}
@@ -142,31 +147,31 @@ footer a{color:var(--oro);text-decoration:none}
 <script>
 const WA = "https://wa.me/573133469261?text=";
 const P = [
- {g:"g1", img:"img/roja.jpg", name:"Cotización Completa", badge:"-12%", strike:"$ 1.540.000", price:"$ 1.355.000",
+ {g:"g1", img:"img/roja.jpg", name:"Fotografía Completa", cat:"Solo fotografía", badge:"-12%", strike:"$ 1.540.000", price:"$ 1.355.000",
   inc:["Sesión: 18 fotos editadas (1–3 horas)","Evento: 150 fotos editadas, cobertura completa","50 fotos impresas 10×15 + retablo 100×80 cm","Todas las fotos sin editar (entrega completa)"],
   pdf:"pdf/Cotizacion_Completa_Fotografia.pdf"},
- {g:"g1", img:"img/rosa.jpg", name:"Paquete Completo + Video", badge:"-12%", strike:"$ 2.510.000", price:"$ 2.210.000",
+ {g:"g1", img:"img/rosa.jpg", name:"Completo Foto + Video", cat:"Fotografía + video", badge:"-12%", strike:"$ 2.510.000", price:"$ 2.210.000",
   inc:["Todo lo de la Cotización Completa","Video: tráiler 1 min + resumen 7–15 min","Entrega en 4K con dron","Impresiones y retablo incluidos"],
   pdf:"pdf/Paquete_Completo_Foto_y_Video.pdf"},
- {g:"g2", img:"img/sombrero1.jpg", name:"Combo Básico", badge:"-7%", strike:"$ 790.000", price:"$ 735.000",
+ {g:"g2", img:"img/sombrero1.jpg", name:"Combo Básico", cat:"Solo fotografía", badge:"-7%", strike:"$ 790.000", price:"$ 735.000",
   inc:["50 fotos de evento","Sesión de 10 fotos","20 impresas 10×15 + retablo 100×80"],
   pdf:"pdf/Combo_Basico_50_fotos.pdf"},
- {g:"g2", img:"img/celeste.jpg", name:"Combo Plus", badge:"-10%", strike:"$ 1.070.000", price:"$ 965.000",
+ {g:"g2", img:"img/celeste.jpg", name:"Combo Plus", cat:"Solo fotografía", badge:"-10%", strike:"$ 1.070.000", price:"$ 965.000",
   inc:["100 fotos de evento","Sesión de 15 fotos","30 impresas 10×15 + retablo 100×80"],
   pdf:"pdf/Combo_Plus_100_fotos.pdf"},
- {g:"g2", img:"img/sombrero2.jpg", name:"Combo Premium", badge:"-12%", strike:"$ 1.255.000", price:"$ 1.105.000",
+ {g:"g2", img:"img/sombrero2.jpg", name:"Combo Premium", cat:"Solo fotografía", badge:"-12%", strike:"$ 1.255.000", price:"$ 1.105.000",
   inc:["150 fotos de evento","Sesión de 20 fotos","50 impresas 10×15 + retablo 100×80"],
   pdf:"pdf/Combo_Premium_150_fotos.pdf"},
- {g:"g2", img:"img/nocturna.jpg", name:"Combo Deluxe", badge:"-15%", strike:"$ 2.510.000", price:"$ 2.135.000",
+ {g:"g2", img:"img/nocturna.jpg", name:"Combo Deluxe", cat:"Fotografía + video", badge:"-15%", strike:"$ 2.510.000", price:"$ 2.135.000",
   inc:["200 fotos de evento","Sesión de 25 fotos","Video principal 4K con dron","70 impresas 10×15 + retablo 100×80"],
   pdf:"pdf/Combo_Deluxe_200_fotos_mas_video.pdf"},
- {g:"g3", img:"img/blanca.jpg", name:"Video Principal", badge:null, strike:null, price:"$ 950.000",
+ {g:"g3", img:"img/blanca.jpg", name:"Video de Evento", cat:"Solo video", badge:null, strike:null, price:"$ 950.000",
   inc:["Cobertura completa del evento","Tráiler 1 min + resumen 7–15 min","Entrega en 4K, color y audio profesional","Tomas aéreas con dron"],
   pdf:"pdf/Paquete_Video_Principal.pdf"},
- {g:"g3", img:"img/running.jpg", name:"Paquete Deportivo", badge:null, strike:null, price:"$ 790.000",
+ {g:"g3", img:"img/runningh.jpg", name:"Paquete Deportivo", cat:"Fotografía + video", badge:null, strike:null, price:"$ 790.000",
   inc:["Video editado tipo reel","Dron para tomas aéreas","50 fotos del evento","Transporte incluido · 2 encargados","Venta individual online con reconocimiento de rostro"],
   pdf:"pdf/Paquete_Deportivo_Reel_Dron_50_fotos.pdf"},
- {g:"g3", img:"img/grados.jpg", name:"Grados", badge:null, strike:null, price:"$ 120.000", per:"por persona",
+ {g:"g3", img:"img/grados.jpg", name:"Grados", cat:"Solo fotografía", badge:null, strike:null, price:"$ 120.000", per:"por persona",
   inc:["7 fotografías editadas en digital","Paquetes grupales disponibles"],
   pdf:"pdf/Propuesta_Grados.pdf"},
 ];
@@ -177,7 +182,10 @@ for (const p of P){
     <div class="card-img">
       ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
       <img src="${p.img}" alt="${p.name}" loading="lazy">
-      <h3 class="card-name">${p.name}</h3>
+      <div class="card-head">
+        ${p.cat ? `<div class="card-tag">${p.cat}</div>` : ""}
+        <h3 class="card-name">${p.name}</h3>
+      </div>
     </div>
     <div class="card-body">
       <ul class="inc">${p.inc.map(i=>`<li>${i}</li>`).join("")}</ul>
