@@ -65,8 +65,8 @@ main{max-width:1080px;margin:0 auto;padding:0 1.2rem 4rem}
   overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .card.show{opacity:1;transform:none}
 .card-img{position:relative;aspect-ratio:4/3.1;overflow:hidden}
-.card-img img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,center 22%);display:block;transform:scale(1.02);transition:transform .8s ease}
-.card:hover .card-img img{transform:scale(1.08)}
+.card-img img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,center 22%);display:block;transform:scale(1.02);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-img img{transform:scale(1.2)}
 .card-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(28,6,10,.92) 100%)}
 .badge{position:absolute;top:.9rem;right:.9rem;z-index:2;background:#120305;color:var(--oro);border:1px solid var(--oro2);
   font-weight:700;font-size:.78rem;padding:.35rem .6rem;border-radius:999px;letter-spacing:.05em}
@@ -206,7 +206,7 @@ const P = [
   inc:["7 fotografías editadas en digital","Cobertura de la ceremonia","Fotos antes o después, con calma"],
   pdf:"pdf/Grados_Bucaramanga.pdf"},
  // ---- Deportivas ----
- {g:"g5", img:"img/runningh.jpg", name:"Paquete Deportivo", cat:"Fotografía + video", badge:"-7%", strike:"$ 860.000", price:"$ 800.000",
+ {g:"g5", img:"img/runningh.jpg", name:"Paquete Deportivo", cat:"Fotografía + video", badge:"-5%", strike:"$ 850.000", price:"$ 810.000",
   inc:["50 fotografías base del evento","Video editado tipo reel (1–2 min)","Dron para tomas aéreas","Transporte incluido · 2 encargados","Venta individual online con reconocimiento de rostro"],
   pdf:"pdf/Paquete_Deportivo_Reel_Dron_50_fotos.pdf"},
  {g:"g5", img:"img/running.jpg", pos:"center 58%", name:"Fotografía Deportiva", cat:"Solo fotografía", badge:null, strike:null, price:"$ 450.000",
@@ -219,6 +219,10 @@ const P = [
   inc:["Dron con piloto","Videos en D-Log o Rec.709","4K de 60 a 100 fps","Vuelo máximo: 1 h 10 min"],
   pdf:"pdf/Alquiler_Dron.pdf"},
 ];
+// ordenar de menor a mayor precio dentro de cada categoría (orden global
+// ascendente ⇒ ascendente en cada grupo, ya que cada card va a su sección)
+const priceNum = s => parseInt(String(s).replace(/[^\d]/g, ""), 10) || 0;
+P.sort((a, b) => priceNum(a.price) - priceNum(b.price));
 for (const p of P){
   const el = document.createElement("article");
   el.className = "card";
