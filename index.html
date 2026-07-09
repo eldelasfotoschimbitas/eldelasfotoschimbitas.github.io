@@ -65,7 +65,7 @@ main{max-width:1080px;margin:0 auto;padding:0 1.2rem 4rem}
   overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .card.show{opacity:1;transform:none}
 .card-img{position:relative;aspect-ratio:4/3.1;overflow:hidden}
-.card-img img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;transform:scale(1.02);transition:transform .8s ease}
+.card-img img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,center 22%);display:block;transform:scale(1.02);transition:transform .8s ease}
 .card:hover .card-img img{transform:scale(1.08)}
 .card-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(28,6,10,.92) 100%)}
 .badge{position:absolute;top:.9rem;right:.9rem;z-index:2;background:#120305;color:var(--oro);border:1px solid var(--oro2);
@@ -190,26 +190,26 @@ const P = [
   inc:["Cobertura completa del evento","Tráiler 1 min + resumen 7–15 min","Entrega en 4K, color y audio profesional","Tomas aéreas con dron"],
   pdf:"pdf/Paquete_Video_Principal.pdf"},
  // ---- Graduaciones ----
- {g:"g4", img:"img/grad60.jpg", name:"Grado Digital", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 60.000", per:"por persona",
+ {g:"g4", img:"img/grad_nino.jpg", name:"Grado Digital", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 70.000", per:"por persona · grupos de +20",
   inc:["7 fotos digitales (pre-grado, evento y grupales)","Entrega digital lista para imprimir"],
   pdf:"pdf/Grados_Paquetes_Por_Persona.pdf"},
- {g:"g4", img:"img/grad70.jpg", name:"Grado con Impresiones", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 70.000", per:"por persona",
+ {g:"g4", img:"img/grad_verde.jpg", name:"Grado con Impresiones", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 80.000", per:"por persona · grupos de +20",
   inc:["7 fotos digitales","1 impresa 10×15 cm + 1 impresa 20×30 cm"],
   pdf:"pdf/Grados_Paquetes_Por_Persona.pdf"},
- {g:"g4", img:"img/grad95.jpg", name:"Grado con Retablo", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 95.000", per:"por persona",
+ {g:"g4", img:"img/grad95.jpg", name:"Grado con Retablo", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 105.000", per:"por persona · grupos de +20",
   inc:["7 fotos digitales","Retablo 30×40 cm listo para colgar"],
   pdf:"pdf/Grados_Paquetes_Por_Persona.pdf"},
- {g:"g4", img:"img/grad100.jpg", name:"Grado Completo", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 100.000", per:"por persona",
+ {g:"g4", img:"img/grad100.jpg", name:"Grado Completo", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 110.000", per:"por persona · grupos de +20",
   inc:["7 fotos digitales","Retablo 30×40 cm","Impresiones 15×10 y 15×20 cm"],
   pdf:"pdf/Grados_Paquetes_Por_Persona.pdf"},
- {g:"g4", img:"img/gradbuc.jpg", name:"Grados Bucaramanga", cat:"Solo fotografía", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
+ {g:"g4", img:"img/gradbuc2.jpg", name:"Grados Bucaramanga", cat:"Solo fotografía", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
   inc:["7 fotografías editadas en digital","Cobertura de la ceremonia","Fotos antes o después, con calma"],
   pdf:"pdf/Grados_Bucaramanga.pdf"},
  // ---- Deportivas ----
  {g:"g5", img:"img/runningh.jpg", name:"Paquete Deportivo", cat:"Fotografía + video", badge:"-7%", strike:"$ 860.000", price:"$ 800.000",
   inc:["50 fotografías base del evento","Video editado tipo reel (1–2 min)","Dron para tomas aéreas","Transporte incluido · 2 encargados","Venta individual online con reconocimiento de rostro"],
   pdf:"pdf/Paquete_Deportivo_Reel_Dron_50_fotos.pdf"},
- {g:"g5", img:"img/running.jpg", name:"Fotografía Deportiva", cat:"Solo fotografía", badge:null, strike:null, price:"$ 450.000",
+ {g:"g5", img:"img/running.jpg", pos:"center 58%", name:"Fotografía Deportiva", cat:"Solo fotografía", badge:null, strike:null, price:"$ 450.000",
   inc:["50 fotografías base editadas","Transporte incluido","Venta individual online con reconocimiento de rostro"],
   pdf:"pdf/Fotografia_Deportiva_50_fotos.pdf"},
  {g:"g5", img:"img/runningd.jpg", name:"Video Cámara + Dron", cat:"Solo video", badge:null, strike:null, price:"$ 350.000",
@@ -225,7 +225,7 @@ for (const p of P){
   el.innerHTML = `
     <div class="card-img">
       ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
-      <img src="${p.img}" alt="${p.name}" loading="lazy">
+      <img src="${p.img}" alt="${p.name}" loading="lazy"${p.pos ? ` style="--pos:${p.pos}"` : ""}>
       <div class="card-head">
         ${p.cat ? `<div class="card-tag">${p.cat}</div>` : ""}
         <h3 class="card-name">${p.name}</h3>
