@@ -199,6 +199,9 @@ footer a{color:var(--oro);text-decoration:none}
 const WA = "https://wa.me/573133469261?text=";
 const P = [
  // ---- Paquetes completos (foto + video) ----
+ {g:"g1", img:"img/celeste.jpg", name:"Combo Video + 60 Fotos", cat:"Fotografía + video", badge:"-10%", strike:"$ 1.410.000", price:"$ 1.270.000",
+  inc:["60 fotos editadas del evento","Video: tráiler 1 min + resumen 7–15 min","Entrega en 4K, color y audio profesional","Tomas aéreas con dron"],
+  pdf:null},
  {g:"g1", img:"img/rosa.jpg", name:"Completo Foto + Video", cat:"Fotografía + video", badge:"-12%", strike:"$ 2.510.000", price:"$ 2.210.000",
   inc:["Sesión 18 fotos + evento 150 fotos","Video: tráiler 1 min + resumen 7–15 min","Entrega en 4K con dron","Impresiones y retablo incluidos"],
   pdf:"pdf/Paquete_Completo_Foto_y_Video.pdf"},
@@ -235,6 +238,9 @@ const P = [
  {g:"g4", img:"img/grad100.jpg", name:"Grado Completo", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 110.000", per:"por persona · grupos de +20",
   inc:["7 fotos digitales","Retablo 30×40 cm","Impresiones 15×10 y 15×20 cm"],
   pdf:"pdf/Grados_Completo.pdf?v=10"},
+ {g:"g4", img:"img/grad_plus.jpg", name:"Grado Completo Plus", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
+  inc:["8 fotos digitales (3 pre-grado, 3 evento y 2 grupales)","Retablo 30×40 cm","Impresiones 10×15 y 20×25 cm"],
+  pdf:"pdf/Grados_Completo_Plus.pdf?v=1"},
  {g:"g4", img:"img/gradbuc2.jpg", name:"Grados Bucaramanga", cat:"Solo fotografía", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
   inc:["7 fotografías editadas en digital","Cobertura de la ceremonia","Fotos antes o después, con calma"],
   pdf:"pdf/Grados_Bucaramanga.pdf?v=10"},
@@ -277,7 +283,7 @@ for (const p of P){
       </div>
       <div class="cta-row">
         <a class="btn btn-wa" target="_blank" rel="noopener" href="${WA + encodeURIComponent("Hola, quiero información del " + p.name + ".")}">Reservar</a>
-        <a class="btn btn-pdf" target="_blank" rel="noopener" href="${p.pdf}">Ver PDF</a>
+        ${p.pdf ? `<a class="btn btn-pdf" target="_blank" rel="noopener" href="${p.pdf}">Ver PDF</a>` : ""}
       </div>
     </div>`;
   document.getElementById(p.g).appendChild(el);
