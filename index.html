@@ -241,7 +241,7 @@ const P = [
  {g:"g4", img:"img/grad_plus.jpg", name:"Grado Completo Plus", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
   inc:["8 fotos digitales (3 pre-grado, 3 evento y 2 grupales)","Retablo 30×40 cm","Impresiones 10×15 y 20×25 cm"],
   pdf:"pdf/Grados_Completo_Plus.pdf?v=1"},
- {g:"g4", img:"img/gradbuc2.jpg", name:"Grados Bucaramanga", cat:"Solo fotografía", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
+ {g:"g4", img:"img/gradbuc2.jpg", last:true, name:"Grados Bucaramanga", cat:"Solo fotografía", badge:null, strike:null, price:"$ 120.000", per:"por persona · grupos de +20",
   inc:["7 fotografías editadas en digital","Cobertura de la ceremonia","Fotos antes o después, con calma"],
   pdf:"pdf/Grados_Bucaramanga.pdf?v=10"},
  // ---- Deportivas ----
@@ -261,7 +261,9 @@ const P = [
 // ordenar de mayor a menor precio dentro de cada categoría (orden global
 // descendente ⇒ descendente en cada grupo, ya que cada card va a su sección)
 const priceNum = s => parseInt(String(s).replace(/[^\d]/g, ""), 10) || 0;
-P.sort((a, b) => priceNum(b.price) - priceNum(a.price));
+// grados: de menor a mayor con Bucaramanga al final; el resto de mayor a menor
+P.sort((a, b) => a.g.localeCompare(b.g) || (a.last ? 1 : 0) - (b.last ? 1 : 0) ||
+  (a.g === "g4" ? priceNum(a.price) - priceNum(b.price) : priceNum(b.price) - priceNum(a.price)));
 for (const p of P){
   const el = document.createElement("article");
   el.className = "card";
