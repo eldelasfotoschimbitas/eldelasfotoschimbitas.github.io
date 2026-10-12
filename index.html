@@ -137,7 +137,7 @@ footer a{color:var(--oro);text-decoration:none}
   <div class="hero-in">
     <div class="hero-script">Planes y Paquetes</div>
     <div class="hero-caps">Fotografía &nbsp;·&nbsp; Video &nbsp;·&nbsp; Eventos</div>
-    <p class="hero-sub">XV años, sesiones, grados y eventos deportivos. Mira los paquetes, descarga el PDF y reserva tu fecha por WhatsApp.</p>
+    <p class="hero-sub">XV años, sesiones, grados y eventos deportivos. Todos los paquetes de XV incluyen <b style="color:var(--oro);font-weight:600">video pre-15 con dron</b> y la entrega de todas las fotos sin editar. Mira los paquetes, descarga el PDF y reserva tu fecha por WhatsApp.</p>
   </div>
 </header>
 
@@ -164,12 +164,6 @@ footer a{color:var(--oro);text-decoration:none}
     <div class="grid" id="g3"></div>
   </section>
 
-  <section class="cat-sec" data-cat="g6">
-    <h2 class="sec-t">Extras para XV</h2>
-    <p class="sec-s">Súmalo a cualquier paquete de foto, video o ambos</p>
-    <div class="grid" id="g6"></div>
-  </section>
-
   <section class="cat-sec" data-cat="g4">
     <h2 class="sec-t">Graduaciones</h2>
     <p class="sec-s">Pre-grado y ceremonia · valor por persona</p>
@@ -182,7 +176,7 @@ footer a{color:var(--oro);text-decoration:none}
     <div class="grid" id="g5"></div>
   </section>
 
-  <p class="nota">Para garantizar tu fecha se abona el 40% del valor contratado al momento de la reserva. Los precios de combos incluyen fotos impresas 10×15 cm y retablo de 100×80 cm. En los paquetes de XV, además de las fotos editadas, se entregan todas las fotos sin editar.</p>
+  <p class="nota">Para garantizar tu fecha se abona el 40% del valor contratado al momento de la reserva. Los precios de combos incluyen fotos impresas 10×15 cm y retablo de 100×80 cm. Todos los paquetes de XV incluyen video pre-15 con dron (~30 s, dron + cámara en vivo) y 3 fotos extra con dron: llevamos el dron solo para ti, con tomas distintas a las de un cubrimiento normal. Además de las fotos editadas, se entregan todas las fotos sin editar.</p>
 
   <div class="mas-servicios">
     <p>¿No encuentras lo que buscas aquí?</p>
@@ -204,37 +198,33 @@ footer a{color:var(--oro);text-decoration:none}
 <script>
 const WA = "https://wa.me/573133469261?text=";
 const P = [
- // ---- Paquetes completos (foto + video) ----
- {g:"g1", img:"img/celeste.jpg", name:"Combo Video + 60 Fotos", cat:"Fotografía + video", badge:"-10%", strike:"$ 1.410.000", price:"$ 1.270.000",
-  inc:["60 fotos editadas del evento","Video: tráiler 1 min + resumen 7–15 min","Entrega en 4K, color y audio profesional","Tomas aéreas con dron","Todas las fotos sin editar (entrega completa)"],
-  pdf:null},
- {g:"g1", img:"img/rosa.jpg", name:"Completo Foto + Video", cat:"Fotografía + video", badge:"-12%", strike:"$ 2.510.000", price:"$ 2.210.000",
-  inc:["Sesión 18 fotos + evento 150 fotos","Video: tráiler 1 min + resumen 7–15 min","Entrega en 4K con dron","Impresiones y retablo incluidos","Todas las fotos sin editar (entrega completa)"],
-  pdf:"pdf/Paquete_Completo_Foto_y_Video.pdf"},
- {g:"g1", img:"img/nocturna.jpg", name:"Combo Deluxe", cat:"Fotografía + video", badge:"-15%", strike:"$ 2.510.000", price:"$ 2.135.000",
-  inc:["200 fotos de evento","Sesión de 25 fotos","Video principal 4K con dron","70 impresas 10×15 + retablo 100×80","Todas las fotos sin editar (entrega completa)"],
-  pdf:"pdf/Combo_Deluxe_200_fotos_mas_video.pdf"},
- // ---- Fotografía ----
- {g:"g2", img:"img/roja.jpg", name:"Fotografía Completa", cat:"Solo fotografía", badge:"-12%", strike:"$ 1.540.000", price:"$ 1.355.000",
-  inc:["Sesión: 18 fotos editadas (1–3 horas)","Evento: 150 fotos editadas, cobertura completa","50 fotos impresas 10×15 + retablo 100×80 cm","Todas las fotos sin editar (entrega completa)"],
-  pdf:"pdf/Cotizacion_Completa_Fotografia.pdf"},
- {g:"g2", img:"img/sombrero1.jpg", name:"Combo Básico", cat:"Solo fotografía", badge:"-7%", strike:"$ 790.000", price:"$ 735.000",
-  inc:["50 fotos de evento","Sesión de 10 fotos","20 impresas 10×15 + retablo 100×80","Todas las fotos sin editar (entrega completa)"],
-  pdf:"pdf/Combo_Basico_50_fotos.pdf"},
- {g:"g2", img:"img/celeste.jpg", name:"Combo Plus", cat:"Solo fotografía", badge:"-10%", strike:"$ 1.070.000", price:"$ 965.000",
-  inc:["100 fotos de evento","Sesión de 15 fotos","30 impresas 10×15 + retablo 100×80","Todas las fotos sin editar (entrega completa)"],
-  pdf:"pdf/Combo_Plus_100_fotos.pdf"},
- {g:"g2", img:"img/sombrero2.jpg", name:"Combo Premium", cat:"Solo fotografía", badge:"-12%", strike:"$ 1.255.000", price:"$ 1.105.000",
-  inc:["150 fotos de evento","Sesión de 20 fotos","50 impresas 10×15 + retablo 100×80","Todas las fotos sin editar (entrega completa)"],
-  pdf:"pdf/Combo_Premium_150_fotos.pdf"},
+ // ---- Paquetes completos (foto + video + pre-15 con dron) ----
+ {g:"g1", img:"img/celeste.jpg", name:"Combo Video + 60 Fotos", cat:"Fotografía + video", badge:"-11%", strike:"$ 1.530.000", price:"$ 1.350.000",
+  inc:["60 fotos editadas del evento", "Video: tráiler 1 min + resumen 7–15 min", "Entrega en 4K, color y audio profesional", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Combo_Video_60_Fotos.pdf?v=1"},
+ {g:"g1", img:"img/rosa.jpg", name:"Completo Foto + Video", cat:"Fotografía + video", badge:"-14%", strike:"$ 2.630.000", price:"$ 2.260.000",
+  inc:["Sesión 18 fotos + evento 150 fotos", "Video: tráiler 1 min + resumen 7–15 min", "Entrega en 4K con dron", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "Impresiones y retablo incluidos", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Completo_Foto_y_Video.pdf?v=1"},
+ {g:"g1", img:"img/nocturna.jpg", name:"Combo Deluxe", cat:"Fotografía + video", badge:"-16%", strike:"$ 2.630.000", price:"$ 2.195.000",
+  inc:["200 fotos de evento", "Sesión de 25 fotos", "Video principal 4K con dron", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "70 impresas 10×15 + retablo 100×80", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Combo_Deluxe.pdf?v=1"},
+ // ---- Fotografía (+ video pre-15 con dron) ----
+ {g:"g2", img:"img/roja.jpg", name:"Fotografía Completa", cat:"Fotografía + video pre-15", badge:"-14%", strike:"$ 1.660.000", price:"$ 1.425.000",
+  inc:["Sesión: 18 fotos editadas (1–3 horas)", "Evento: 150 fotos editadas, cobertura completa", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "50 fotos impresas 10×15 + retablo 100×80 cm", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Fotografia_Completa.pdf?v=1"},
+ {g:"g2", img:"img/sombrero1.jpg", name:"Combo Básico", cat:"Fotografía + video pre-15", badge:"-6%", strike:"$ 910.000", price:"$ 855.000",
+  inc:["50 fotos de evento", "Sesión de 10 fotos", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "20 impresas 10×15 + retablo 100×80", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Combo_Basico.pdf?v=1"},
+ {g:"g2", img:"img/celeste.jpg", name:"Combo Plus", cat:"Fotografía + video pre-15", badge:"-10%", strike:"$ 1.190.000", price:"$ 1.065.000",
+  inc:["100 fotos de evento", "Sesión de 15 fotos", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "30 impresas 10×15 + retablo 100×80", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Combo_Plus.pdf?v=1"},
+ {g:"g2", img:"img/sombrero2.jpg", name:"Combo Premium", cat:"Fotografía + video pre-15", badge:"-13%", strike:"$ 1.375.000", price:"$ 1.195.000",
+  inc:["150 fotos de evento", "Sesión de 20 fotos", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron", "50 impresas 10×15 + retablo 100×80", "Todas las fotos sin editar (entrega completa)"],
+  pdf:"pdf/xv/Combo_Premium.pdf?v=1"},
  // ---- Video ----
- {g:"g3", img:"img/blanca.jpg", name:"Video de Evento", cat:"Solo video", badge:null, strike:null, price:"$ 950.000",
-  inc:["Cobertura completa del evento","Tráiler 1 min + resumen 7–15 min","Entrega en 4K, color y audio profesional","Tomas aéreas con dron"],
-  pdf:"pdf/Paquete_Video_Principal.pdf"},
- // ---- Extras XV ----
- {g:"g6", img:"img/rosa.jpg", pos:"center 40%", name:"Video Pre-15 con Dron", cat:"Extra · se suma a tu paquete", badge:"Nuevo", strike:null, price:"$ 120.000", per:"adicional a cualquier paquete de XV",
-  inc:["Llevamos el dron: tomas aéreas distintas a las de un cubrimiento normal","3 fotos extra tomadas con dron","Video pre-15 de ~30 s: tomas con dron + cámara en vivo","Corto pero significativo, listo para compartir en redes"],
-  pdf:null},
+ {g:"g3", img:"img/blanca.jpg", name:"Video de Evento", cat:"Video", badge:null, strike:null, price:"$ 1.060.000",
+  inc:["Cobertura completa del evento", "Tráiler 1 min + resumen 7–15 min", "Entrega en 4K, color y audio profesional", "Tomas aéreas con dron", "Video pre-15 con dron (~30 s) + 3 fotos tomadas con dron"],
+  pdf:"pdf/xv/Video_de_Evento.pdf?v=1"},
  // ---- Graduaciones ----
  {g:"g4", img:"img/grad_nino.jpg", name:"Grado Digital", cat:"Pre-grado y evento", badge:null, strike:null, price:"$ 70.000", per:"por persona · grupos de +20",
   inc:["7 fotos digitales (pre-grado, evento y grupales)","Entrega digital lista para imprimir"],
@@ -268,10 +258,10 @@ const P = [
   inc:["Dron con piloto","Videos en D-Log o Rec.709","4K de 60 a 100 fps","Vuelo máximo: 1 h 10 min"],
   pdf:"pdf/Alquiler_Dron.pdf"},
 ];
-// ordenar de menor a mayor precio dentro de cada categoría (orden global
-// ascendente ⇒ ascendente en cada grupo, ya que cada card va a su sección)
+// ordenar de mayor a menor precio dentro de cada categoría (orden global
+// descendente ⇒ descendente en cada grupo, ya que cada card va a su sección)
 const priceNum = s => parseInt(String(s).replace(/[^\d]/g, ""), 10) || 0;
-P.sort((a, b) => priceNum(a.price) - priceNum(b.price));
+P.sort((a, b) => priceNum(b.price) - priceNum(a.price));
 for (const p of P){
   const el = document.createElement("article");
   el.className = "card";
@@ -308,7 +298,6 @@ const CATS = [
   {id:"g1",  label:"Paquetes completos"},
   {id:"g2",  label:"Fotografía"},
   {id:"g3",  label:"Video"},
-  {id:"g6",  label:"Extras XV"},
   {id:"g4",  label:"Grados"},
   {id:"g5",  label:"Deportivas"},
 ];
